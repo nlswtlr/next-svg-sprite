@@ -10,5 +10,9 @@
     "nextjs"
   ],
   "author": "Nils Wittler <hello@nilsw.io>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@swc/cli": "^0.1.53",
+    "@swc/core": "^1.2.119"
+  }
 }
