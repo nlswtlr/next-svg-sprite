@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "svg sprite generation for next.js applications",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nlswtlr/next-svg-sprite"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
