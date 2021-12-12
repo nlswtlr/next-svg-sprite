@@ -8,15 +8,24 @@
     "url": "https://github.com/nlswtlr/next-svg-sprite"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "npm run build",
+    "build": "rm -rf dist/* && swc src -d dist",
+    "dev": "swc src -d dist -w -s"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.53",
+    "@swc/core": "^1.2.119",
+    "@types/node": "^16.11.12",
+    "@types/svg-sprite-loader": "^3.9.4",
+    "chokidar": "^3.5.2",
+    "typescript": "^4.5.3"
+  },
+  "dependencies": {
+    "svg-sprite-loader": "^6.0.11"
   },
   "keywords": [
     "nextjs"
   ],
   "author": "Nils Wittler <hello@nilsw.io>",
-  "license": "MIT",
-  "devDependencies": {
-    "@swc/cli": "^0.1.53",
-    "@swc/core": "^1.2.119"
-  }
+  "license": "MIT"
 }
