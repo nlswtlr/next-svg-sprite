@@ -2,7 +2,7 @@
   "name": "next-svg-sprite",
   "version": "0.0.1",
   "description": "svg sprite generation for next.js applications",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/nlswtlr/next-svg-sprite"
@@ -10,18 +10,20 @@
   "scripts": {
     "postinstall": "npm run build",
     "build": "rm -rf dist/* && swc src -d dist",
-    "dev": "swc src -d dist -w -s"
+    "dev": "swc src -d dist -w -s",
+    "test": "ts-node test/index.ts"
   },
   "devDependencies": {
-    "@swc/cli": "^0.1.53",
-    "@swc/core": "^1.2.119",
-    "@types/node": "^16.11.12",
-    "@types/svg-sprite-loader": "^3.9.4",
-    "chokidar": "^3.5.2",
-    "typescript": "^4.5.3"
+    "@swc/cli": "0.1.55",
+    "@swc/core": "1.2.145",
+    "@types/node": "16.11.26",
+    "@types/svg-sprite-loader": "3.9.5",
+    "chokidar": "3.5.3",
+    "ts-node": "10.5.0",
+    "typescript": "4.5.5"
   },
   "dependencies": {
-    "svg-sprite-loader": "^6.0.11"
+    "svg-sprite-loader": "6.0.11"
   },
   "keywords": [
     "nextjs"
