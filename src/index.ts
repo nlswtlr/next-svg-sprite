@@ -21,7 +21,7 @@ export default ({ ...nextConfig }) => {
                 loader: "svg-sprite-loader",
                 options: {
                   symbolId: "[name]-[hash:8]",
-                  runtimeGenerator: path.resolve(__dirname, "rtg.js"),
+                  runtimeGenerator: path.resolve(__dirname, "runtime-generator.js"),
                 },
               },
             ],
