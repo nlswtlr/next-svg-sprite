@@ -1,6 +1,6 @@
 {
   "name": "next-svg-sprite",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "svg sprite generation for next.js applications",
   "main": "dist/index.js",
   "repository": {
