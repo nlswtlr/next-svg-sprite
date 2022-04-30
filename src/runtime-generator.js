@@ -1,7 +1,7 @@
-import { stringifyRequest } from "loader-utils";
-import { stringifySymbol } from "svg-sprite-loader/lib/utils";
+const { stringifyRequest } = require("loader-utils");
+const { stringifySymbol } = require("svg-sprite-loader/lib/utils");
 
-export default ({ symbol, config, context }: any) => {
+module.exports = ({ symbol, config, context }) => {
   const { spriteModule, symbolModule } = config;
   const spriteRequest = stringifyRequest({ context }, spriteModule);
   const symbolRequest = stringifyRequest({ context }, symbolModule);
@@ -14,11 +14,11 @@ export default ({ symbol, config, context }: any) => {
     const symbol = new SpriteSymbol(${stringifySymbol(symbol)});
     sprite.add(symbol);
 
-    const SvgSpriteIcon = (props) => React.createElement(
+    const SvgSpriteIcon = ({...props}) => React.createElement(
       'svg',
       Object.assign({
         viewBox: symbol.viewBox
-      }, props),
+      }, {...props}),
       React.createElement(
         'use',
         {
@@ -27,7 +27,14 @@ export default ({ symbol, config, context }: any) => {
       )
     )
 
+    SvgSpriteIcon.viewBox = symbol.viewBox;
+    SvgSpriteIcon.id = symbol.id;
+    SvgSpriteIcon.content = symbol.content;
+    SvgSpriteIcon.url = symbol.url;
+    SvgSpriteIcon.toString = symbol.toString;
+
     module.exports = SvgSpriteIcon;
     module.exports.default = SvgSpriteIcon;
+
   `;
 };
