@@ -33,7 +33,7 @@ function __rest(s, e) {
     return t;
 }
 
-var index = (function (_a) {
+var withSvgSprite = function (_a) {
     var nextConfig = __rest(_a, []);
     return Object.assign({}, nextConfig, {
         // TODO: enhance types
@@ -70,6 +70,6 @@ var index = (function (_a) {
             return config;
         },
     });
-});
+};
 
-module.exports = index;
+module.exports = withSvgSprite;

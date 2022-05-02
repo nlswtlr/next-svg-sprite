@@ -1,6 +1,6 @@
 import path from "path";
 
-export default ({ ...nextConfig }) => {
+const withSvgSprite = ({ ...nextConfig }) => {
   return Object.assign({}, nextConfig, {
     // TODO: enhance types
     webpack(config: any, options: any) {
@@ -48,3 +48,5 @@ export default ({ ...nextConfig }) => {
     },
   });
 };
+
+export default withSvgSprite;

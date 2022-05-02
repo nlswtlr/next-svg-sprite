@@ -1,15 +1,14 @@
-const { stringifyRequest } = require("loader-utils");
+const { sep } = require("path");
 const { stringifySymbol } = require("svg-sprite-loader/lib/utils");
 
-module.exports = ({ symbol, config, context }) => {
+module.exports = ({ symbol, config }) => {
   const { spriteModule, symbolModule } = config;
-  const spriteRequest = stringifyRequest({ context }, spriteModule);
-  const symbolRequest = stringifyRequest({ context }, symbolModule);
+  const nmBasePath = `${process.cwd()}${sep}node_modules${sep}`;
 
   return `
     const React = require('react');
-    const SpriteSymbol = require('${symbolRequest}');
-    const sprite = require('${spriteRequest}');
+    const SpriteSymbol = require('${symbolModule.replace(nmBasePath, "")}');
+    const sprite = require('${spriteModule.replace(nmBasePath, "")}');
     
     const symbol = new SpriteSymbol(${stringifySymbol(symbol)});
     sprite.add(symbol);
@@ -35,6 +34,5 @@ module.exports = ({ symbol, config, context }) => {
 
     module.exports = SvgSpriteIcon;
     module.exports.default = SvgSpriteIcon;
-
   `;
 };
