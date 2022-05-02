@@ -1,20 +1,22 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
-  '@rollup/plugin-commonjs': ^22.0.0
-  '@rollup/plugin-node-resolve': ^13.2.1
+  '@rollup/plugin-commonjs': 22.0.0
+  '@rollup/plugin-node-resolve': 13.2.1
   '@types/node': 16.11.26
   '@types/svg-sprite-loader': 3.9.5
   chokidar: 3.5.3
   rollup: 2.71.0
-  rollup-plugin-copy: ^3.4.0
-  rollup-plugin-typescript2: ^0.31.2
+  rollup-plugin-copy: 3.4.0
+  rollup-plugin-typescript2: 0.31.2
+  svg-baker-runtime: 1.4.7
   svg-sprite-loader: 6.0.11
-  ts-node: ^10.7.0
+  ts-node: 10.7.0
   tslib: 2.4.0
   typescript: 4.5.5
 
 dependencies:
+  svg-baker-runtime: 1.4.7
   svg-sprite-loader: 6.0.11
 
 devDependencies:
@@ -25,8 +27,8 @@ devDependencies:
   chokidar: 3.5.3
   rollup: 2.71.0
   rollup-plugin-copy: 3.4.0
-  rollup-plugin-typescript2: 0.31.2_3facd5adb82849b9f5ac6eb18b48f0a0
-  ts-node: 10.7.0_f94da96e4d78a751cdd66b59796b8fdd
+  rollup-plugin-typescript2: 0.31.2_h6wnllnyfbe3t5nmn2yywshqua
+  ts-node: 10.7.0_7fg2s3snpctvdtownnmxs24p3u
   tslib: 2.4.0
   typescript: 4.5.5
 
@@ -1419,7 +1421,7 @@ packages:
       is-plain-object: 3.0.1
     dev: true
 
-  /rollup-plugin-typescript2/0.31.2_3facd5adb82849b9f5ac6eb18b48f0a0:
+  /rollup-plugin-typescript2/0.31.2_h6wnllnyfbe3t5nmn2yywshqua:
     resolution: {integrity: sha512-hRwEYR1C8xDGVVMFJQdEVnNAeWRvpaY97g5mp3IeLnzhNXzSVq78Ye/BJ9PAaUfN4DXa/uDnqerifMOaMFY54Q==}
     peerDependencies:
       rollup: '>=1.26.3'
@@ -1672,7 +1674,7 @@ packages:
     resolution: {integrity: sha1-y99WD9e5r2MlAv7UD5GMFX6pcTc=}
     dev: false
 
-  /ts-node/10.7.0_f94da96e4d78a751cdd66b59796b8fdd:
+  /ts-node/10.7.0_7fg2s3snpctvdtownnmxs24p3u:
     resolution: {integrity: sha512-TbIGS4xgJoX2i3do417KSaep1uRAW/Lu+WAL2doDHC0D6ummjirVOXU5/7aiZotbQ5p1Zp9tP7U6cYhA0O7M8A==}
     hasBin: true
     peerDependencies:
