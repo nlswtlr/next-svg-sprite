@@ -8,7 +8,7 @@
     "url": "https://github.com/nlswtlr/next-svg-sprite"
   },
   "scripts": {
-    "postinstall": "npm run build",
+    "prepublishOnly": "npm run build",
     "build": "rollup -c",
     "dev": "rollup -c --watch",
     "test": "ts-node test/index.ts"

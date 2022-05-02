@@ -1,4 +1,3 @@
-.testcase
 .DS_Store
+test/.testcase
 node_modules
-dist
